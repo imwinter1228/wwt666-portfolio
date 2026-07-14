@@ -8,6 +8,10 @@
   --color-warm-yellow: #FBBF24;
   --color-charcoal: #1F1F1F;
   --color-slate-warm: #57534E;
+  --color-dark-bg: #0a0705;
+  --color-dark-surface: #14100c;
+  --color-warm-white: #F5F0EB;
+  --color-warm-gray: #B0A89E;
 }
 
 html {
@@ -17,8 +21,8 @@ html {
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: linear-gradient(180deg, #FFFBF5 0%, #FFF5E6 40%, #FFF0E0 100%);
-  color: #1F1F1F;
+  background: #0a0705;
+  color: #F5F0EB;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -34,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: rgba(249, 115, 22, 0.2);
+  background: rgba(249, 115, 22, 0.3);
 }
 
 @layer utilities {
@@ -45,10 +49,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.45);
   }
   .glass-dark {
-    background: rgba(31, 31, 31, 0.65);
+    background: rgba(20, 16, 12, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
   .text-shadow {
     text-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);

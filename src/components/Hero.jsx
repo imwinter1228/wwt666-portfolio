@@ -32,8 +32,8 @@ export default function Hero() {
         >
           <source src="/assets/videos/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-cream-100/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-warm-orange/10 via-transparent to-warm-yellow/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-dark-bg/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-warm-orange/15 via-transparent to-warm-yellow/15" />
       </div>
 
       <div className="relative z-10 max-w-[1700px] mx-auto px-6 lg:px-10 w-full">
@@ -43,9 +43,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark mb-8">
               <span className="w-2 h-2 rounded-full bg-warm-orange animate-pulse" />
-              <span className="text-sm font-medium text-charcoal">
+              <span className="text-sm font-medium text-warm-white">
                 AI 创作 · 世界观构建
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function Hero() {
               delay={60}
               animateBy="words"
               direction="top"
-              className="text-xl sm:text-2xl text-slate-warm/80 max-w-xl mb-10 leading-relaxed"
+              className="text-xl sm:text-2xl text-warm-gray/80 max-w-xl mb-10 leading-relaxed"
             />
 
             <div className="flex flex-wrap gap-4 mb-16">
@@ -71,10 +71,10 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
-                  className="glass rounded-2xl px-6 py-4 backdrop-blur-xl"
+                  className="glass-dark rounded-2xl px-6 py-4 backdrop-blur-xl"
                 >
                   <div className="text-2xl font-bold text-warm-orange">{stat.value}</div>
-                  <div className="text-sm text-slate-warm mt-0.5">{stat.label}</div>
+                  <div className="text-sm text-warm-gray mt-0.5">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

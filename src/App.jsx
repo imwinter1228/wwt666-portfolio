@@ -10,22 +10,22 @@ import Ferrofluid from './components/Ferrofluid'
 function App() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-      <div className="fixed inset-0 z-0" style={{ background: '#FFFBF5' }}>
+      <div className="fixed inset-0 z-0" style={{ background: '#0a0705' }}>
         <Ferrofluid
           colors={['#f97316', '#fbbf24', '#fb923c', '#fed7aa']}
-          speed={0.25}
-          scale={1.4}
-          turbulence={0.7}
-          fluidity={0.12}
-          rimWidth={0.25}
+          speed={0.3}
+          scale={1.3}
+          turbulence={0.8}
+          fluidity={0.1}
+          rimWidth={0.3}
           sharpness={2.5}
-          shimmer={0.6}
-          glow={1.2}
+          shimmer={0.8}
+          glow={2.0}
           flowDirection="down"
-          opacity={0.45}
+          opacity={0.8}
           mouseInteraction={true}
-          mouseStrength={0.4}
-          mouseRadius={0.25}
+          mouseStrength={0.5}
+          mouseRadius={0.3}
         />
       </div>
 

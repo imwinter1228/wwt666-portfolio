@@ -45,9 +45,9 @@ function CharacterCard({ character, index }) {
           </div>
         </BorderGlow>
         <div className="p-5">
-          <h3 className="text-lg font-semibold text-charcoal mb-0.5">{character.name}</h3>
+          <h3 className="text-lg font-semibold text-warm-white mb-0.5">{character.name}</h3>
           <p className="text-sm text-warm-orange font-medium mb-2">{character.role}</p>
-          <p className="text-sm text-slate-warm/70 leading-relaxed">{character.desc}</p>
+          <p className="text-sm text-warm-gray/70 leading-relaxed">{character.desc}</p>
         </div>
       </div>
     </motion.div>
@@ -68,14 +68,14 @@ export default function Characters() {
             animateBy="words"
             direction="bottom"
             as="h2"
-            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="每一个角色背后都是一个完整的故事。从主角到路人，从觉醒者到幸存者，用 3D 动漫风格构建宇宙世界的人物生态。"
             delay={30}
             animateBy="words"
             direction="top"
-            className="text-lg text-slate-warm/70 max-w-2xl"
+            className="text-lg text-warm-gray/70 max-w-2xl"
           />
         </div>
 

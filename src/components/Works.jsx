@@ -57,14 +57,14 @@ export default function Works() {
             animateBy="words"
             direction="bottom"
             as="h2"
-            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="从副本入口到城市废墟，每一帧画面都是对世界观的视觉诠释。点击可放大查看高清细节。"
             delay={30}
             animateBy="words"
             direction="top"
-            className="text-lg text-slate-warm/70 max-w-2xl"
+            className="text-lg text-warm-gray/70 max-w-2xl"
           />
         </div>
 
@@ -94,8 +94,8 @@ export default function Works() {
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-charcoal mb-1">城市商业街哥布林袭击场景</h3>
-              <p className="text-slate-warm/70 text-sm">
+              <h3 className="text-xl font-semibold text-warm-white mb-1">城市商业街哥布林袭击场景</h3>
+              <p className="text-warm-gray/70 text-sm">
                 商业街副本降临·哥布林入侵城市 — 第一人称叙事运镜，展现副本打开瞬间的氛围。
               </p>
             </div>
@@ -128,8 +128,8 @@ export default function Works() {
                   </div>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-charcoal mb-1">{poster.title}</h3>
-                  <p className="text-xs text-slate-warm/60 line-clamp-2">{poster.desc}</p>
+                  <h3 className="font-semibold text-warm-white mb-1">{poster.title}</h3>
+                  <p className="text-xs text-warm-gray/60 line-clamp-2">{poster.desc}</p>
                 </div>
               </div>
             </motion.div>

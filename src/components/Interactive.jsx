@@ -48,14 +48,14 @@ export default function Interactive() {
             animateBy="words"
             direction="bottom"
             as="h2"
-            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="选择不同的世界观色调，感受色彩如何改变场景的情绪与叙事。"
             delay={30}
             animateBy="words"
             direction="top"
-            className="text-lg text-slate-warm/70 max-w-2xl"
+            className="text-lg text-warm-gray/70 max-w-2xl"
           />
         </div>
 
@@ -63,7 +63,7 @@ export default function Interactive() {
           <div className="glass rounded-3xl p-8 w-full lg:w-80 flex-shrink-0">
             <div className="flex items-center gap-3 mb-6">
               <Sparkles size={22} className="text-warm-orange" />
-              <span className="text-sm font-semibold text-slate-warm uppercase tracking-wider">调色板</span>
+              <span className="text-sm font-semibold text-warm-gray uppercase tracking-wider">调色板</span>
             </div>
             <div className="space-y-3">
               {modes.map((mode) => (
@@ -84,8 +84,8 @@ export default function Interactive() {
                       <Shuffle size={18} />
                     </div>
                     <div>
-                      <div className="font-semibold text-charcoal">{mode.label}</div>
-                      <div className="text-xs text-slate-warm/60 mt-0.5">{mode.desc}</div>
+                      <div className="font-semibold text-warm-white">{mode.label}</div>
+                      <div className="text-xs text-warm-gray/60 mt-0.5">{mode.desc}</div>
                     </div>
                   </div>
                 </button>

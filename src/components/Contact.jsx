@@ -35,14 +35,14 @@ export default function Contact() {
             animateBy="words"
             direction="bottom"
             as="h2"
-            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="如果你有世界观搭建、角色设计、场景构建的需求，欢迎联系。"
             delay={30}
             animateBy="words"
             direction="top"
-            className="text-lg text-slate-warm/70 max-w-xl mx-auto"
+            className="text-lg text-warm-gray/70 max-w-xl mx-auto"
           />
         </div>
 
@@ -62,8 +62,8 @@ export default function Contact() {
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-sm text-slate-warm/60 mb-1">{item.label}</div>
-                      <div className="text-charcoal font-medium text-lg">{item.value}</div>
+                      <div className="text-sm text-warm-gray/60 mb-1">{item.label}</div>
+                      <div className="text-warm-white font-medium text-lg">{item.value}</div>
                     </div>
                   </div>
                 )

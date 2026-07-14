@@ -1,6 +1,7 @@
 ﻿import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Play, Maximize2, X } from 'lucide-react'
+import BlurText from './BlurText'
 
 const posters = [
   { title: '城市副本入口', image: '/assets/posters/portal.png', desc: '城市中隐蔽的副本入口，连接现实与异界的门扉' },
@@ -46,23 +47,26 @@ export default function Works() {
   return (
     <section id="works" ref={sectionRef} className="relative py-24 lg:py-32">
       <div className="max-w-[1700px] mx-auto px-6 lg:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <span className="text-sm font-semibold text-warm-orange uppercase tracking-wider">
             作品案例
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4">
-            场景与视觉
-          </h2>
-          <p className="text-lg text-slate-warm/70 max-w-2xl">
-            从副本入口到城市废墟，每一帧画面都是对世界观的视觉诠释。
-            点击可放大查看高清细节。
-          </p>
-        </motion.div>
+          <BlurText
+            text="场景与视觉"
+            delay={80}
+            animateBy="words"
+            direction="bottom"
+            as="h2"
+            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+          />
+          <BlurText
+            text="从副本入口到城市废墟，每一帧画面都是对世界观的视觉诠释。点击可放大查看高清细节。"
+            delay={30}
+            animateBy="words"
+            direction="top"
+            className="text-lg text-slate-warm/70 max-w-2xl"
+          />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

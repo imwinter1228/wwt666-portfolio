@@ -1,6 +1,7 @@
 ﻿import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import BlurText from './BlurText'
 
 const stats = [
   { value: '7+', label: '世界观项目' },
@@ -55,10 +56,13 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-slate-warm/80 max-w-xl mb-10 leading-relaxed">
-              AI 设计师 · 从世界观到角色，用模型构建幻想世界。
-              专注于 3D 动漫角色设定、城市副本场景与叙事视觉表达。
-            </p>
+            <BlurText
+              text="AI 设计师 · 从世界观到角色，用模型构建幻想世界。专注于 3D 动漫角色设定、城市副本场景与叙事视觉表达。"
+              delay={60}
+              animateBy="words"
+              direction="top"
+              className="text-xl sm:text-2xl text-slate-warm/80 max-w-xl mb-10 leading-relaxed"
+            />
 
             <div className="flex flex-wrap gap-4 mb-16">
               {stats.map((stat) => (

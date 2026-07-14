@@ -1,6 +1,7 @@
 ﻿import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import BorderGlow from './BorderGlow'
+import BlurText from './BlurText'
 
 const characters = [
   { name: '林曜', role: '主角 · 觉醒者', image: '/assets/characters/linyao.png', desc: '拥有特殊能力的少年，在末日世界中不断成长' },
@@ -57,24 +58,26 @@ export default function Characters() {
   return (
     <section id="characters" className="relative py-24 lg:py-32">
       <div className="max-w-[1700px] mx-auto px-6 lg:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <span className="text-sm font-semibold text-warm-orange uppercase tracking-wider">
             角色介绍
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4">
-            世界观人物
-          </h2>
-          <p className="text-lg text-slate-warm/70 max-w-2xl">
-            每一个角色背后都是一个完整的故事。从主角到路人，从觉醒者到幸存者，
-            用 3D 动漫风格构建宇宙世界的人物生态。
-          </p>
-        </motion.div>
+          <BlurText
+            text="世界观人物"
+            delay={80}
+            animateBy="words"
+            direction="bottom"
+            as="h2"
+            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+          />
+          <BlurText
+            text="每一个角色背后都是一个完整的故事。从主角到路人，从觉醒者到幸存者，用 3D 动漫风格构建宇宙世界的人物生态。"
+            delay={30}
+            animateBy="words"
+            direction="top"
+            className="text-lg text-slate-warm/70 max-w-2xl"
+          />
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {characters.map((character, index) => (

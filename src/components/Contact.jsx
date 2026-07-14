@@ -1,12 +1,12 @@
 ﻿import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import BlurText from './BlurText'
 
 const items = [
   {
     icon: <Phone size={22} />,
     label: '电话',
     value: '请联系邮箱获取',
-    action: null,
   },
   {
     icon: <Mail size={22} />,
@@ -18,7 +18,6 @@ const items = [
     icon: <MapPin size={22} />,
     label: '地点',
     value: '中国 · 在线协作',
-    action: null,
   },
 ]
 
@@ -26,23 +25,26 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 lg:py-32">
       <div className="max-w-[1700px] mx-auto px-6 lg:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
-        >
+        <div className="mb-16 text-center">
           <span className="text-sm font-semibold text-warm-orange uppercase tracking-wider">
             联系方式
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4">
-            一起构建世界
-          </h2>
-          <p className="text-lg text-slate-warm/70 max-w-xl mx-auto">
-            如果你有世界观搭建、角色设计、场景构建的需求，欢迎联系。
-          </p>
-        </motion.div>
+          <BlurText
+            text="一起构建世界"
+            delay={80}
+            animateBy="words"
+            direction="bottom"
+            as="h2"
+            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+          />
+          <BlurText
+            text="如果你有世界观搭建、角色设计、场景构建的需求，欢迎联系。"
+            delay={30}
+            animateBy="words"
+            direction="top"
+            className="text-lg text-slate-warm/70 max-w-xl mx-auto"
+          />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

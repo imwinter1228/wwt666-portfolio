@@ -1,12 +1,12 @@
 ﻿import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sparkles, Shuffle, Zap } from 'lucide-react'
+import BlurText from './BlurText'
 
 const modes = [
   {
     id: 'warm',
     label: '暖阳',
-    icon: 'sun',
     accent: '#F97316',
     bg: 'linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(251, 191, 36, 0.06))',
     desc: '橙色暖调 · 末日余晖中的希望',
@@ -14,7 +14,6 @@ const modes = [
   {
     id: 'cool',
     label: '极夜',
-    icon: 'moon',
     accent: '#6366F1',
     bg: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.06))',
     desc: '靛蓝冷调 · 副本入口的幽光',
@@ -22,7 +21,6 @@ const modes = [
   {
     id: 'crimson',
     label: '赤幕',
-    icon: 'fire',
     accent: '#DC2626',
     bg: 'linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(239, 68, 68, 0.06))',
     desc: '血红警示 · 紧急公告的颜色',
@@ -31,7 +29,6 @@ const modes = [
 
 export default function Interactive() {
   const [activeMode, setActiveMode] = useState('warm')
-
   const currentMode = modes.find((m) => m.id === activeMode)
 
   return (
@@ -41,23 +38,26 @@ export default function Interactive() {
         style={{ background: currentMode?.bg }}
       />
       <div className="max-w-[1700px] mx-auto px-6 lg:px-10 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <span className="text-sm font-semibold text-warm-orange uppercase tracking-wider">
             互动体验
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4">
-            风格切换
-          </h2>
-          <p className="text-lg text-slate-warm/70 max-w-2xl">
-            选择不同的世界观色调，感受色彩如何改变场景的情绪与叙事。
-          </p>
-        </motion.div>
+          <BlurText
+            text="风格切换"
+            delay={80}
+            animateBy="words"
+            direction="bottom"
+            as="h2"
+            className="text-4xl lg:text-5xl font-bold text-charcoal mt-3 mb-4"
+          />
+          <BlurText
+            text="选择不同的世界观色调，感受色彩如何改变场景的情绪与叙事。"
+            delay={30}
+            animateBy="words"
+            direction="top"
+            className="text-lg text-slate-warm/70 max-w-2xl"
+          />
+        </div>
 
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           <div className="glass rounded-3xl p-8 w-full lg:w-80 flex-shrink-0">
@@ -65,7 +65,6 @@ export default function Interactive() {
               <Sparkles size={22} className="text-warm-orange" />
               <span className="text-sm font-semibold text-slate-warm uppercase tracking-wider">调色板</span>
             </div>
-
             <div className="space-y-3">
               {modes.map((mode) => (
                 <button

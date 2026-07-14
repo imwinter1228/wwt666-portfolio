@@ -58,7 +58,7 @@ export default function Hero() {
 
             <BlurText
               text="AI 设计师 · 从世界观到角色，用模型构建幻想世界。专注于 3D 动漫角色设定、城市副本场景与叙事视觉表达。"
-              delay={60}
+              delay={50}
               animateBy="words"
               direction="top"
               className="text-xl sm:text-2xl text-warm-gray/80 max-w-xl mb-10 leading-relaxed"

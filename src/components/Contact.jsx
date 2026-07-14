@@ -31,18 +31,14 @@ export default function Contact() {
           </span>
           <BlurText
             text="一起构建世界"
-            delay={80}
-            animateBy="words"
-            direction="bottom"
-            as="h2"
+            delay={45}
+            animateBy="letters" direction="bottom" as="h2"
             className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="如果你有世界观搭建、角色设计、场景构建的需求，欢迎联系。"
-            delay={30}
-            animateBy="words"
-            direction="top"
-            className="text-lg text-warm-gray/70 max-w-xl mx-auto"
+            delay={25}
+            animateBy="words" direction="top" className="text-lg text-warm-gray/70 max-w-xl mx-auto"
           />
         </div>
 

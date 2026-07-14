@@ -53,18 +53,14 @@ export default function Works() {
           </span>
           <BlurText
             text="场景与视觉"
-            delay={80}
-            animateBy="words"
-            direction="bottom"
-            as="h2"
+            delay={45}
+            animateBy="letters" direction="bottom" as="h2"
             className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="从副本入口到城市废墟，每一帧画面都是对世界观的视觉诠释。点击可放大查看高清细节。"
-            delay={30}
-            animateBy="words"
-            direction="top"
-            className="text-lg text-warm-gray/70 max-w-2xl"
+            delay={25}
+            animateBy="words" direction="top" className="text-lg text-warm-gray/70 max-w-2xl"
           />
         </div>
 

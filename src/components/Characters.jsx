@@ -64,18 +64,14 @@ export default function Characters() {
           </span>
           <BlurText
             text="世界观人物"
-            delay={80}
-            animateBy="words"
-            direction="bottom"
-            as="h2"
+            delay={45}
+            animateBy="letters" direction="bottom" as="h2"
             className="text-4xl lg:text-5xl font-bold text-warm-white mt-3 mb-4"
           />
           <BlurText
             text="每一个角色背后都是一个完整的故事。从主角到路人，从觉醒者到幸存者，用 3D 动漫风格构建宇宙世界的人物生态。"
-            delay={30}
-            animateBy="words"
-            direction="top"
-            className="text-lg text-warm-gray/70 max-w-2xl"
+            delay={25}
+            animateBy="words" direction="top" className="text-lg text-warm-gray/70 max-w-2xl"
           />
         </div>
 

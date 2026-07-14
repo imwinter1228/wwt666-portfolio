@@ -113,7 +113,7 @@ export default function Works() {
               onClick={() => setLightbox(poster)}
             >
               <div className="glass rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-500 hover:-translate-y-1">
-                <div className="aspect-[4/3] overflow-hidden bg-cream-200 relative">
+                <div className="aspect-[4/3] overflow-hidden bg-dark-surface relative">
                   <img
                     src={poster.image}
                     alt={poster.title}

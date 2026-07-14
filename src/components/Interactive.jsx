@@ -102,7 +102,7 @@ export default function Interactive() {
               transition={{ duration: 0.4 }}
               className="flex-1 glass rounded-3xl p-2 overflow-hidden"
             >
-              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-cream-200 relative">
+              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-dark-surface relative">
                 <img
                   src="/assets/posters/portal.png"
                   alt="预览"

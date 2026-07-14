@@ -35,7 +35,7 @@ function CharacterCard({ character, index }) {
           glowColor="30 90 65"
           colors={['#f97316', '#fbbf24', '#fb923c']}
         >
-          <div className="aspect-[3/4] overflow-hidden bg-cream-200">
+          <div className="aspect-[3/4] overflow-hidden bg-dark-surface">
             <img
               src={character.image}
               alt={character.name}

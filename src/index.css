@@ -1,0 +1,56 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFFBF5;
+  --color-cream-100: #FFF5E6;
+  --color-cream-200: #FFE8CC;
+  --color-warm-orange: #F97316;
+  --color-warm-yellow: #FBBF24;
+  --color-charcoal: #1F1F1F;
+  --color-slate-warm: #57534E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #FFFBF5 0%, #FFF5E6 40%, #FFF0E0 100%);
+  color: #1F1F1F;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.2);
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
+  .glass-dark {
+    background: rgba(31, 31, 31, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .text-shadow {
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);
+  }
+}

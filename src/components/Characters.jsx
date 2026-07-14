@@ -1,5 +1,6 @@
 ﻿import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import BorderGlow from './BorderGlow'
 
 const characters = [
   { name: '林曜', role: '主角 · 觉醒者', image: '/assets/characters/linyao.png', desc: '拥有特殊能力的少年，在末日世界中不断成长' },
@@ -22,17 +23,26 @@ function CharacterCard({ character, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group"
     >
-      <div className="glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-orange-500/5 transition-all duration-500 hover:-translate-y-1">
-        <div className="aspect-[3/4] overflow-hidden bg-cream-200">
-          <img
-            src={character.image}
-            alt={character.name}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            loading="lazy"
-          />
-        </div>
+      <div className="glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-orange-500/10 transition-shadow duration-500">
+        <BorderGlow
+          borderRadius={16}
+          glowRadius={30}
+          edgeSensitivity={25}
+          coneSpread={20}
+          fillOpacity={0.15}
+          glowColor="30 90 65"
+          colors={['#f97316', '#fbbf24', '#fb923c']}
+        >
+          <div className="aspect-[3/4] overflow-hidden bg-cream-200">
+            <img
+              src={character.image}
+              alt={character.name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </BorderGlow>
         <div className="p-5">
           <h3 className="text-lg font-semibold text-charcoal mb-0.5">{character.name}</h3>
           <p className="text-sm text-warm-orange font-medium mb-2">{character.role}</p>
